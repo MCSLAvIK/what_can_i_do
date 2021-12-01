@@ -1,25 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;500&display=swap');
 @media screen and (max-width: 900px) {
     .fone {
-    background: url("../img/fone.jpg") center no-repeat !important;
+    background: #222 url("../img/fone.jpg") center no-repeat !important;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     }
     header {
         padding-top: 30px !important;
-        padding-left: 20% !important;
+        padding-left: 40px !important;
         margin-bottom: 100px !important;
     }
     nav {
-        display: flex;
+        display: flex !important;
+        text-align: center !important;
+        animation: nav 2s ease-in-out 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    @keyframes nav {
+        30% { opacity: 0.3; }   
+        60% { opacity: 0.6; }
+        80% { opacity: 0.8; }
+        100% { opacity: 1; }
     }
     .nav-link {
         font-size: 17px !important;
-        margin-right: 10px !important;
+        margin-right: 25px !important;
+        font-family: 'Arial' !important;
     }
     .nav-link:hover {
-        color: rgb(199, 199, 199);
-        text-decoration: underline;
+        color: rgb(199, 199, 199) !important;
+        text-decoration: underline !important;
     }
     .content {
         width: 80% !important;
@@ -37,10 +48,12 @@
     }
     .text-base1 {
         padding-left: 10px !important;
-        padding-bottom: 10px !important;
+        padding-right: 10px !important;
+        padding-bottom: 20px !important;
     }
     .text-base2 {
         padding-left: 10px !important;
+        padding-right: 10px !important;
         margin-bottom: 40px !important;
     }
     .extra {
@@ -48,6 +61,7 @@
     }
     .text-extra {
         padding-left: 10px !important;
+        padding-right: 10px !important;
         padding-bottom: 5px !important;
     }
 }
@@ -452,6 +466,13 @@ header {
 }
 nav {
     display: flex;
+    animation: nav 3s ease-in-out 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-left: -450px;
+}
+@keyframes nav {
+    100% { opacity: 1; margin-left: 0px;}
 }
 .nav-link {
     font-size: 20px;
@@ -476,10 +497,23 @@ nav {
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+    animation: content1 3s ease-in-out 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes content1 {
+    100% { opacity: 1; }
 }
 .base {
     width: 100%;
     padding-top: 30px;
+    animation: base 3s ease-in-out 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-left: -450px;
+}
+@keyframes base {
+    100% { opacity: 1; margin-left: 0px;}
 }
 .text-base1 {
     font-weight: 400;
@@ -493,6 +527,13 @@ nav {
 }
 .extra {
     width: 100%;
+    animation: base 3s ease-in-out 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-left: -450px;
+}
+@keyframes extra {
+    100% { opacity: 1; margin-left: 0px;}
 }
 .text-extra {
     font-weight: 400;
