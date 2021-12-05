@@ -66,6 +66,16 @@
         padding-bottom: 5px !important;
     }
 }
+@media screen and (max-width: 790px) {
+    .content {
+        height: 45% !important;
+    }
+}
+@media screen and (max-width: 590px) {
+    .content {
+        height: 55% !important;
+    }
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
